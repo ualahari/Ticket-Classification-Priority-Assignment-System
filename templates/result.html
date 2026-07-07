@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">SupportIQ</div>
+</div>
+
+<div class="main-container">
+    <div class="card">
+        <h1>Ticket Analysis Result</h1>
+
+        <div class="result-box">
+            <p><strong>Ticket:</strong></p>
+            <p class="ticket-text">{{ ticket }}</p>
+
+            <div class="result-grid">
+                <div>
+                    <span class="label">Category</span>
+                    <span class="value">{{ category }}</span>
+                </div>
+
+                <div>
+                    <span class="label">Priority</span>
+                    <span class="value {{ priority.lower() }}">{{ priority }}</span>
+                </div>
+            </div>
+
+            <a class="back-btn" href="/">Analyze Another Ticket</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
